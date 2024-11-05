@@ -1,0 +1,136 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: lightpink; /* Основной цвет фона */
+    background-image: url("./img/geeks_logo.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin: 0; /* Убираем отступы по умолчанию */
+}
+
+.header_text {
+    font-family: cursive;
+    font-size: 50px; /* Размер шрифта заголовка */
+    font-weight: bold;
+    color: black;
+    text-align: center;
+    padding-bottom: 30px; /* Исправлено на "30px" для корректного отступа */
+}
+
+.second_text {
+    background-color: gold; /* Цвет фона для блока с текстом */
+    width: 80%; /* Установлено в процентах для адаптивности */
+    max-width: 500px; /* Максимальная ширина */
+    height: 200px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 15px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Добавлено тень для улучшения визуализации */
+}
+
+.text {
+    font-family: 'Nunito', sans-serif; /* Добавлено 'sans-serif' как запасной шрифт */
+    font-size: 25px;
+    font-weight: bold;
+    color: black;
+    text-align: center;
+    margin: 20px 0 0 0; /* Упрощение отступов */
+}
+
+.buttons {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.btn {
+    background-color: gold; /* Цвет фона кнопок */
+    color: black;
+    padding: 15px 32px;
+    text-align: center;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    border: none;
+    border-radius: 12px;
+    transition: background-color 0.3s ease, transform 0.3s ease; /* Добавлен эффект трансформации */
+}
+
+.btn:hover {
+    background-color: #ffcc00; /* Изменен цвет фона при наведении для контраста */
+    transform: scale(1.05); /* Увеличение кнопки при наведении */
+}
+
+.gif_container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Позиционирование кнопок */
+#noButton {
+    position: absolute;
+    left: 150px; /* Исправлено на 'left' вместо 'margin-left' */
+    transition: 0.5s;
+}
+
+#yesButton {
+    position: absolute;
+    right: 150px; /* Исправлено на 'right' вместо 'margin-right' */
+}
+
+/* Медиазапросы для мобильных устройств */
+@media (max-width: 768px) {
+    .header_text {
+        font-size: 30px; /* Уменьшение размера заголовка для мобильных */
+    }
+
+    .second_text {
+        height: 150px; /* Уменьшение высоты блока с текстом */
+        width: 90%; /* Ширина блока для мобильных */
+    }
+
+    .text {
+        font-size: 20px; /* Уменьшение размера шрифта для текста */
+    }
+
+    .btn {
+        font-size: 14px; /* Уменьшение размера шрифта на кнопках */
+        padding: 10px 20px; /* Уменьшение паддингов кнопок */
+    }
+
+    #noButton, #yesButton {
+        left: 20px; /* Уменьшение расстояния до краев экрана */
+        right: 20px; /* Уменьшение расстояния до краев экрана */
+    }
+}
+
+@media (max-width: 480px) {
+    .header_text {
+        font-size: 24px; /* Дополнительное уменьшение размера заголовка для маленьких экранов */
+    }
+
+    .second_text {
+        height: 120px; /* Дополнительное уменьшение высоты блока с текстом */
+    }
+
+    .text {
+        font-size: 18px; /* Уменьшение размера шрифта для текста */
+    }
+
+    .btn {
+        font-size: 12px; /* Уменьшение размера шрифта на кнопках */
+        padding: 8px 16px; /* Уменьшение паддингов кнопок */
+    }
+
+    #noButton, #yesButton {
+        left: 10px; /* Уменьшение расстояния до краев экрана */
+        right: 10px; /* Уменьшение расстояния до краев экрана */
+    }
+}

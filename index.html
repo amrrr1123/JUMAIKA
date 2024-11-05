@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="ru"> <!-- Указываем язык как русский -->
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Адаптация для мобильных устройств -->
+    <title>Признание в любви</title> <!-- Более описательный заголовок -->
+    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="./yesStyle.css">
+</head>
+<body>
+    <div class="container">
+        <div class="text">
+            <h1 class="header_text">Ты будешь Жумаевой?</h1>
+        </div>
+        <div class="gif_container">
+            <img src="https://media.giphy.com/media/LnKonfpQ44fNvuGLkA/giphy.gif" alt="Милое анимированное изображение">
+        </div>
+        <div class="buttons">
+            <button class="btn" id="yesButton" onclick="nextPage()">да</button>
+            <button class="btn" id="noButton" onmouseover="moveButton()">нет</button>
+        </div>
+    </div>
+
+    <script>
+        function nextPage() {
+            window.location.href = "yes.html"; // Переход на страницу yes.html
+        }
+
+        function moveButton() {
+            const noButton = document.getElementById('noButton');
+            let x = Math.random() * (window.innerWidth - noButton.offsetWidth);
+            let y = Math.random() * (window.innerHeight - noButton.offsetHeight);
+            noButton.style.position = 'absolute'; // Установка позиции кнопки
+            noButton.style.left = `${x}px`;
+            noButton.style.top = `${y}px`;
+        }
+    </script>
+</body>
+</html>
